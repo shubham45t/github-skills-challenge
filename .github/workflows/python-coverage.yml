@@ -29,7 +29,7 @@ jobs:
           pip install pytest-cov==6.2.1
 
       - name: Run tests and generate coverage details
-        run: pytest --cov=src
+        run: PYTHONPATH=. pytest --cov=src
 
       - name: Coverage comment
         uses: py-cov-action/python-coverage-comment-action@v3
